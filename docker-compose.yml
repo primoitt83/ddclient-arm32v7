@@ -1,0 +1,37 @@
+version: '3.3'
+
+services:
+  ddclient-noip:
+    image: linuxserver/ddclient:v3.10.0-ls125
+    container_name: ddclient-noip
+    restart: always
+    environment:
+      - PUID=1000
+      - PGID=1000
+      - TZ=America/Sao_Paulo
+    volumes:
+      - ./config/ddclient.conf.noip:/config/ddclient.conf
+    networks:
+      docker:
+    logging:
+      options:
+        max-size: 100M
+
+  ddclient-dedyn:
+    image: linuxserver/ddclient:v3.10.0-ls125
+    container_name: ddclient-dedyn
+    restart: always
+    environment:
+      - PUID=1000
+      - PGID=1000
+      - TZ=America/Sao_Paulo
+    volumes:
+      - ./config/ddclient.conf.dedyn:/config/ddclient.conf
+    networks:
+      docker:
+    logging:
+      options:
+        max-size: 100M
+
+networks:
+  docker:

@@ -1,0 +1,12 @@
+daemon=300
+syslog=yes
+pid=/var/run/ddclient/ddclient.pid
+use=cmd, cmd='curl https://checkipv4.dedyn.io/'
+
+## dedyn.io
+protocol=dyndns2
+ssl=yes
+server=update.dedyn.io
+login=mylogin.dedyn.io
+password='myPassword'
+mydns.dedyn.io

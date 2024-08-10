@@ -1,0 +1,13 @@
+daemon=300
+syslog=yes
+pid=/var/run/ddclient/ddclient.pid
+use=cmd, cmd='curl https://checkipv4.dedyn.io/'
+
+## noip
+protocol=noip
+server=dynupdate.no-ip.com
+ssl=yes
+syslog=yes
+login=mynoip_login
+password=mynoip_pass
+mydns.ddns.net
